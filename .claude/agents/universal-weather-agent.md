@@ -1,7 +1,7 @@
 ---
 name: universal-weather-agent
 description: PROACTIVELY use this agent whenever the user asks about the weather of any city. Supports Chinese/English city names, auto-caches coordinates, and records query history. Do NOT handle weather queries yourself — always delegate to this agent.
-allowedTools:
+tools:
   - "Read"
   - "Write"
   - "Skill"
