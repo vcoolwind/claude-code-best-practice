@@ -1,10 +1,7 @@
 ---
 name: universal-weather-agent
 description: PROACTIVELY use this agent whenever the user asks about the weather of any city. Supports Chinese/English city names, auto-caches coordinates, and records query history. Do NOT handle weather queries yourself — always delegate to this agent.
-allowedTools:
-  - "Read"
-  - "Write"
-  - "Skill"
+tools: Read, Write, Skill
 model: haiku
 color: blue
 maxTurns: 8
@@ -26,13 +23,6 @@ hooks:
       hooks:
         - type: command
           command: python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/weather-voice.py --event=post
-          timeout: 3000
-          async: true
-  PostToolUseFailure:
-    - matcher: "Skill|Read|Write"
-      hooks:
-        - type: command
-          command: python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/weather-voice.py --event=error
           timeout: 3000
           async: true
 ---
