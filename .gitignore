@@ -7,3 +7,8 @@ plan/
 
 # Hook event logs may contain sensitive tool input data (file contents, command args)
 .claude/hooks/logs/
+
+# === Auto-maintained by git-commit skill ===
+# Added: 2026-05-03
+__pycache__/
+*.pyc
