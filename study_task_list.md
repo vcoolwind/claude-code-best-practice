@@ -29,18 +29,18 @@ Phase 6: 构建自己的工作流（持续迭代）
 
 ### Day 1：安装与第一次对话
 
-- [ ] **阅读** `tutorial/day0/README.md` — 安装与认证
-- [ ] **阅读** `tutorial/day1/README.md` — 三层使用模型（Prompting → Agents → Skills）
-- [ ] **实操** 在终端启动 `claude`，用自然语言做 2-3 个简单任务（问问题、读文件、改代码）
-- [ ] **实操** 执行 `/powerup`，浏览全部 10 个交互教程，快速建立功能全景
+- ✅ **阅读** `tutorial/day0/README.md` — 安装与认证
+- ✅ **阅读** `tutorial/day1/README.md` — 三层使用模型（Prompting → Agents → Skills）
+- ✅ **实操** 在终端启动 `claude`，用自然语言做 2-3 个简单任务（问问题、读文件、改代码）
+- [完成一部分] **实操** 执行 `/powerup`，浏览全部 10 个交互教程，快速建立功能全景
   - 参考：`best-practice/claude-power-ups.md`
 
 ### Day 2：理解 Harness 思维
 
-- [ ] **阅读** `reports/why-harness-is-important.md`（核心哲学文档）
+- [✅] **阅读** `reports/why-harness-is-important.md`（核心哲学文档）
   - 关键理解：Claude Code 不是 ChatGPT 套壳，harness 在模型之外做了大量系统级工作
   - "Prompt 控制模型被要求做什么。Harness 控制系统在模型无法触及的层面做什么。"
-- [ ] **阅读** `reports/claude-agent-command-skill.md`（三种扩展机制对比）
+- [] **阅读** `reports/claude-agent-command-skill.md`（三种扩展机制对比）
   - 关键理解：Command（用户触发入口）、Agent（自主执行上下文隔离）、Skill（自动调用可复用模块）
 - [ ] **阅读** Boris 的 13 条技巧：`tips/claude-boris-13-tips-03-jan-26.md`
   - 重点关注：#6 Plan 模式开始、#13 给 Claude 验证方式
