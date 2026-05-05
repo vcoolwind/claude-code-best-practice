@@ -1,5 +1,5 @@
 # Claude Code local settings
-settings.local.json
+# settings.local.json
 
 # Hooks
 hooks/config/hooks-config.local.json

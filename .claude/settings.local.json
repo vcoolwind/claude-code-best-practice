@@ -1,0 +1,80 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(city-coordinates)",
+      "Skill(weather-query)",
+      "WebFetch(domain:geocoding-api.open-meteo.com)",
+      "Skill(coordinate-validator)",
+      "WebFetch(domain:nominatim.openstreetmap.org)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.codebuddy/hooks/scripts/check-dangerous-command.py\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.codebuddy/hooks/scripts/post-edit-test-reminder.py\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.codebuddy/hooks/scripts/stop-test-verify.py\""
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "echo '🧘 先想清楚再动手 | Debug 前先喝口水'",
+    "padding": 0
+  },
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "🐢 慢一点，代码不会跑掉",
+      "🌿 深呼吸，需求永远做不完",
+      "☯️ 事缓则圆，急也没用",
+      "🍵 泡杯茶，让思路飘一会",
+      "💡 超过 30 分钟没进展？起来走走",
+      "🎋 弯腰的竹子不会断",
+      "☕ 该喝水了，键盘不会跑",
+      "🌸 花开有时，代码也是",
+      "🎯 一次只做一件事",
+      "🦥 树懒活得久，是有道理的"
+    ]
+  },
+  "spinnerTipsOverride": {
+    "excludeDefault": false,
+    "tips": [
+      "💡 Shift+Tab 切换权限模式",
+      "🧘 超过 1 小时没进展？换个思路",
+      "📝 /compact 可以压缩上下文",
+      "🐢 事缓则圆，先把问题想清楚",
+      "⌨️ Escape 键可以中断当前操作",
+      "☕ 该喝水了，键盘不会跑",
+      "🎯 一次只做一件事",
+      "🔍 /cost 查看当前 token 消耗",
+      "🌿 复杂问题？拆成小步骤",
+      "💤 眼睛累了就闭一会"
+    ]
+  }
+}
