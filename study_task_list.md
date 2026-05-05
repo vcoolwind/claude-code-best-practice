@@ -40,9 +40,15 @@ Phase 6: 构建自己的工作流（持续迭代）
 - [✅] **阅读** `reports/why-harness-is-important.md`（核心哲学文档）
   - 关键理解：Claude Code 不是 ChatGPT 套壳，harness 在模型之外做了大量系统级工作
   - "Prompt 控制模型被要求做什么。Harness 控制系统在模型无法触及的层面做什么。"
-- [] **阅读** `reports/claude-agent-command-skill.md`（三种扩展机制对比）
+- [✅] **阅读** `reports/claude-agent-command-skill.md`（三种扩展机制对比）
   - 关键理解：Command（用户触发入口）、Agent（自主执行上下文隔离）、Skill（自动调用可复用模块）
-- [ ] **阅读** Boris 的 13 条技巧：`tips/claude-boris-13-tips-03-jan-26.md`
+- [进行中] **阅读** Boris 的 13 条技巧：`tips/claude-boris-13-tips-03-jan-26.md`
+  - ✅ 已学完 #1 Run 5 Claudes in Parallel — 并完成了完整的 iTerm2 实操配置
+    - 配置了 Dynamic Profiles（4 角色 Profile 自动导入）
+    - 配置了 Shell 角色别名（`cc()` 函数 + 工作目录守卫 + 角色提示）
+    - 编写了四窗格布局脚本（`cc4` 一键启动）
+    - 产出文档：`tips/iterm2-setup-guide.md`
+  - [ ] #2 ~ #13 待继续
   - 重点关注：#6 Plan 模式开始、#13 给 Claude 验证方式
 
 **✅ Phase 1 检查点：** 能回答 "Command、Agent、Skill 各自在什么场景用？" 并能说出 harness 的 3 个不可替代能力。
@@ -281,4 +287,4 @@ Phase 6: 构建自己的工作流（持续迭代）
 
 ---
 
-*Last updated: 2026-05-03*
+*Last updated: 2026-05-04*
