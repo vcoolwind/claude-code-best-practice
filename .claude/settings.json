@@ -89,6 +89,12 @@
         "hooks": [
           {
             "type": "command",
+            "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/check-dangerous-command.py",
+            "timeout": 5000,
+            "statusMessage": "🔍 安全检查中..."
+          },
+          {
+            "type": "command",
             "command": "python3 ${CLAUDE_PROJECT_DIR}/.claude/hooks/scripts/hooks.py",
             "timeout": 5000,
             "async": true,
